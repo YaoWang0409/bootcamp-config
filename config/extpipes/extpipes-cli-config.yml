@@ -1,6 +1,6 @@
 ---
 # follows the same parameter structure as the DB extractor configuration
-cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE}
+cognite:  # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE}
   # host: https://${EXTPIPES_CDF_CLUSTER}.cognitedata.com/
     host: ${EXTPIPES_CDF_HOST}
     project: ${EXTPIPES_CDF_PROJECT}
@@ -55,9 +55,9 @@ rawdbs:
       rawtables:
           - rawtable-name: datapoints
             pipelines:
-            # source is a short-name identifying the pipeline source being
-            # a 'db-extractor (db)', an 'Azure Function (az-func)',
-            # or 'Azure Data Factory (adf)', 'Python script (py)', ..
+        # source is a short-name identifying the pipeline source being
+        # a 'db-extractor (db)', an 'Azure Function (az-func)',
+        # or 'Azure Data Factory (adf)', 'Python script (py)', ..
                 - source: ice-cream-api
                   schedule: On trigger
                   contacts:
